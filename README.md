@@ -11,7 +11,7 @@ Desenvolvido no curso multi stack da treinaweb
 Ou em ambiente de desenvolvimento:
 
 ```
-composer updates
+composer update
 ```
 
 #### Criar arquivo de configuração de ambiente
@@ -24,6 +24,12 @@ os detalhes da aplicação e conexão com o banco de dados.
 
 ```
 php artisan migrate
+```
+
+#### Iniciar o servidor de desenvolvimento
+
+```
+php artisan serve
 ```
 
 
