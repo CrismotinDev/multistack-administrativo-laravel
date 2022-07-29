@@ -4,6 +4,28 @@ Desenvolvido no curso multi stack da treinaweb
 
 ## instalando 
 
+```
+    composer install
+```
+
+Ou em ambiente de desenvolvimento:
+
+```
+composer updates
+```
+
+#### Criar arquivo de configuração de ambiente
+
+Copiar o arquivo de exemplo `.env.example`para `.env`na raiz do projeto configurar
+os detalhes da aplicação e conexão com o banco de dados.
+
+
+#### Criar a estrutura no banco de dados
+
+```
+php artisan migrate
+```
+
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
