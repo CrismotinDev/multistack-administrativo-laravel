@@ -26,7 +26,7 @@ class ServicoRequest extends FormRequest
     {
         return [
             'nome' => ['required', 'min:2',  'max:255'],
-            'valor_minimo' => ['required', 'numeric'],
+            'valor_minimo' => ['required'],
             'quantidade_horas' => ['required', 'integer'],
             'porcentagem' => ['required', 'integer'],
             'valor_quarto' => ['required', 'numeric'],
