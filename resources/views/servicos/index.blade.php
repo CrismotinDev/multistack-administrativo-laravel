@@ -41,7 +41,7 @@
                                     <td>
                                         <a class="btn" data-toggle="tooltip" data-placement="top" title="Editar"
                                             href="{{ route('servicos.edit', $servico->id) }}">
-                                            <p class="text-primary"> <i class="fa fa-edit"></i></p>
+                                            <p class="text-primary"><i class="fa fa-edit"></i></p>
                                         </a>
                                         <a class="btn" data-toggle="tooltip" data-placement="top" title="Excluir"
                                             href="{{ route('servicos.delete', $servico->id) }}">
