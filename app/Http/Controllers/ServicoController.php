@@ -27,26 +27,35 @@ class ServicoController extends Controller
 
         Servico::create($dados);
 
-        return redirect()->route('servicos.index');
+        return redirect()->route('servicos.index')->with('mensagem', 'Serviço criado com Sucesso!');
     }
 
-    public function edit(int $id)
+    /**
+     * Undocumented function
+     *
+     * @param Servico $servico
+     * @return void
+     */
+    public function edit(Servico $servico)
     {
-
-        $servico = Servico::findOrFail($id);
 
         return view('servicos.edit', compact('servico'));
     }
 
-    public function update(int $id, ServicoRequest $request)
+    /**
+     * Undocumented function
+     *
+     * @param Servico $servico
+     * @param ServicoRequest $request
+     * @return void
+     */
+    public function update(Servico $servico, ServicoRequest $request)
     {
         $dados = $request->except('_token', '_method');
 
-        $servico = Servico::findOrFail($id);
-
         $servico->update($dados);
 
-        return redirect()->route('servicos.index');
+        return redirect()->route('servicos.index')->with('mensagem', 'Serviço atualizado com Sucesso!');
     }
 
     public function delete(int $id)

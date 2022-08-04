@@ -226,8 +226,6 @@ return [
 
     'menu' => [
 
-
-
         [
             'text'    => 'Cadastro de Serviço',
             'icon'    => 'fas fa-fw fa-broom',
@@ -240,6 +238,23 @@ return [
                 [
                     'text' => 'Novo Serviço',
                     'url'  => 'servicos/create',
+                    'icon'    => 'fas fa-fw fa-file',
+                ],
+            ],
+        ],
+
+        [
+            'text'    => 'Cadastro de Usuários',
+            'icon'    => 'fas fa-fw fa-user',
+            'submenu' => [
+                [
+                    'text' => 'Lista de Usuários',
+                    'route'  => 'usuarios.index',
+                    'icon'    => 'fas fa-fw fa-list',
+                ],
+                [
+                    'text' => 'Novo Usuários',
+                    'url'  => 'usuarios/create',
                     'icon'    => 'fas fa-fw fa-file',
                 ],
             ],

@@ -6,6 +6,13 @@
     <h1>Lista de Serviços</h1>
 @stop
 @section('content')
+    @if (session('mensagem'))
+        <div class="alert alert-success">
+            {{ session('mensagem') }}
+
+        </div>
+    @endif
+
     <div class="row">
         <div class="col-12">
             <div class="card">
@@ -39,14 +46,10 @@
                                     <td>{{ $servico->id }}</td>
                                     <td>{{ $servico->nome }}</td>
                                     <td>
-                                        <a class="btn" data-toggle="tooltip" data-placement="top" title="Editar"
-                                            href="{{ route('servicos.edit', $servico->id) }}">
-                                            <p class="text-primary"><i class="fa fa-edit"></i></p>
-                                        </a>
-                                        <a class="btn" data-toggle="tooltip" data-placement="top" title="Excluir"
-                                            href="{{ route('servicos.delete', $servico->id) }}">
-                                            <p class="text-danger"> <i class="fa fa-trash"></i></p>
-                                        </a>
+                                        <a href="{{ route('servicos.edit', $servico) }}"
+                                            class="btn btn-primary">Atualizar</a>
+                                            <a href="{{ route('servicos.delete', $servico) }}"
+                                            class="btn btn-danger">Excluir</a>
                                     </td>
                                 </tr>
                             @endforeach
